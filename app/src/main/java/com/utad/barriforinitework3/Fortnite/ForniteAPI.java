@@ -11,17 +11,16 @@ import retrofit2.http.Path;
 public interface ForniteAPI {
 
     @Headers("TRN-Api-Key: 48057d93-96dc-41a1-b740-2a3e605ee4e9")
-    @GET("v1/profile/{platform}/{epic-nickname}")
-    Observable<UserFortnite> getFortniteInfo(@Path("platform") String platform, @Path("epic-nickname") String epic_nickname);
+    @GET("profile/{platform}/{epic-nickname}")
+    Observable<UserFortnite> getFortniteInfo(@Path("platform") String platformGame, @Path("epic-nickname") String epic_nickname_user);
 
 
     static ForniteAPI Factory(){
-
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(" https://api.fortnitetracker.com/")
+        Retrofit conex = new Retrofit.Builder()
+                .baseUrl("https://api.fortnitetracker.com/v1/")
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        return  retrofit.create(ForniteAPI.class);
+        return conex.create(ForniteAPI.class);
     }
 }

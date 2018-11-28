@@ -1,12 +1,14 @@
 package com.utad.barriforinitework3.Fortnite;
 
+
+//Esta clase es la que arranca con los datos principales, cogiendo los campos que queramos, y poniendoles el mismo nombre
 public class UserFortnite {
     private String accountId;
     private String platformId;
     private String platformName;
     private String platformNameLong;
     private String epicUserHandle;
-    private StatsFortniteP2 stats;
+    private FortniteP2 stats;
 
 
     public String getAccountId() {
@@ -49,11 +51,11 @@ public class UserFortnite {
         this.epicUserHandle = epicUserHandle;
     }
 
-    public StatsFortniteP2 getStats() {
+    public FortniteP2 getStats() {
         return stats;
     }
 
-    public void setStats(StatsFortniteP2 stats) {
+    public void setStats(FortniteP2 stats) {
         this.stats = stats;
     }
 

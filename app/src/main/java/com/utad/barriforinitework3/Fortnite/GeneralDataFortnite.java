@@ -1,7 +1,9 @@
 package com.utad.barriforinitework3.Fortnite;
 
-public class ScoreFortnite {
+public class GeneralDataFortnite {
 
+
+    //Cogemos del apartado score los datos que queremos coger y como son muchos, le decimos a rankfortnite de donde cogerlos
     private RankFortnite score;
     private RankFortnite scorePerMatch;
     private RankFortnite matches;
@@ -39,3 +41,4 @@ public class ScoreFortnite {
         this.kills = kills;
     }
 }
+

@@ -3,6 +3,7 @@ package com.utad.barriforinitework3.Fortnite;
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,10 +33,14 @@ public class ViewModelFortnite extends ViewModel {
 
                     @Override
                     public void onNext(UserFortnite forniteObject) {
-                        //liveData.postValue(forniteObjects);
-                        if(forniteObject!=null) {
+                        if(forniteObject==null) {
                             dataList.clear();
-                            ScoreFortnite data = forniteObject.getStats().getP2();
+                        }
+
+                        else{
+
+                            dataList.clear();
+                            GeneralDataFortnite data = forniteObject.getStats().getP2();
                             dataList.add(data.getScore());
                             dataList.add(data.getScorePerMatch());
                             dataList.add(data.getMatches());
@@ -46,12 +51,10 @@ public class ViewModelFortnite extends ViewModel {
 
                     @Override
                     public void onError(Throwable e) {
-                        Log.d("FalloServicio","err: "+e.getLocalizedMessage());
                     }
 
                     @Override
                     public void onComplete() {
-
                     }
                 });
     }

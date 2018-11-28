@@ -1,4 +1,4 @@
-package com.utad.barriforinitework3;
+package com.utad.barriforinitework3.Fortnite;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -8,50 +8,52 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-import com.utad.barriforinitework3.Fortnite.RankFortnite;
+import com.utad.barriforinitework3.R;
 
 import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ForniteViewHolder> {
 
 
-    private List<RankFortnite> dataObject;
+    private List<RankFortnite> mDataObject;
 
     public MyAdapter(List<RankFortnite> dataObject) {
-        this.dataObject = dataObject;
+        this.mDataObject = dataObject;
     }
 
     @Override
     public ForniteViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater layoutInflater = LayoutInflater.from(viewGroup.getContext());
-        View view = layoutInflater.inflate(R.layout.item_recycleview, viewGroup, false);
+        View view = layoutInflater.inflate(R.layout.cell_recycleview, viewGroup, false);
         return new ForniteViewHolder(view);
     }
 
 
     @Override
     public void onBindViewHolder(ForniteViewHolder forniteViewHolder, int i) {
-        final RankFortnite item = dataObject.get(i);
-        forniteViewHolder.txtForniteTitle.setText(item.getLabel());
-        forniteViewHolder.txtForniteValue.setText(item.getDisplayValue());
-        forniteViewHolder.txtForniteRank.setText(item.getRank());
+        final RankFortnite item = mDataObject.get(i);
+        forniteViewHolder.txtLabel.setText(item.getLabel());
+        forniteViewHolder.txtValue.setText(item.getDisplayValue());
+        forniteViewHolder.txtRank.setText(item.getRank());
 
     }
 
     @Override
     public int getItemCount() {
-        return dataObject.size();
+        return mDataObject.size();
     }
 
     public class ForniteViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView txtForniteTitle, txtForniteValue, txtForniteRank;
+        private TextView txtLabel;
+        private TextView txtValue;
+        private TextView txtRank;
 
         public ForniteViewHolder(View itemView) {
             super(itemView);
-            txtForniteTitle = itemView.findViewById(R.id.title);
-            txtForniteValue = itemView.findViewById(R.id.value);
-            txtForniteRank = itemView.findViewById(R.id.rank);
+            txtLabel = itemView.findViewById(R.id.label);
+            txtValue = itemView.findViewById(R.id.value);
+            txtRank = itemView.findViewById(R.id.rank);
         }
     }
 }

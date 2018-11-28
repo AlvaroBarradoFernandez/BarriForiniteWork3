@@ -5,8 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    card_view:cardCornerRadius="6dp"
-    card_view:cardElevation="3dp"
     card_view:cardUseCompatPadding="true">
 
     <RelativeLayout
@@ -14,11 +12,12 @@
         android:layout_height="200dp">
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/label"
             android:layout_width="160dp"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
+            android:textSize="12sp"
             android:layout_centerHorizontal="true"/>
 
         <TextView
@@ -27,19 +26,22 @@
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:layout_below="@+id/title"
-            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/label"
+            android:textSize="22sp"
+            android:textColor="#ff0000"
+            android:textStyle="bold"
+            android:textAlignment="center"
             />
 
         <TextView
             android:id="@+id/rank"
             android:layout_width="160dp"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:layout_marginBottom="10dp"
             android:layout_centerHorizontal="true"
+            android:textSize="14sp"
             android:layout_below="@id/value"
-
             />
     </RelativeLayout>
 

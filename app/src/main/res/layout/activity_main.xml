@@ -6,10 +6,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Fortnite.MainActivity">
 
     <EditText
-        android:id="@+id/nickname_fornite"
+        android:id="@+id/userName"
         android:layout_width="151dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -18,7 +18,7 @@
         android:inputType="textPersonName" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinnerPlatform"
         android:layout_width="147dp"
         android:layout_height="46dp"
         android:layout_marginStart="200dp"
@@ -26,32 +26,23 @@
         android:entries="@array/spinnerItems" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycleview_fornite"
+        android:id="@+id/recycleviewCard"
         android:layout_width="350dp"
-        android:layout_height="380dp"
+        android:layout_height="400dp"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/nickname_fornite"
+        android:layout_below="@+id/userName"
         android:layout_centerHorizontal="true"
         >
 
     </android.support.v7.widget.RecyclerView>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/buttonGo"
+        android:id="@+id/button"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="300dp"
         android:layout_marginTop="470dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="49dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="303dp"
-        android:layout_marginTop="480dp"
-        android:text="@string/search"
-        android:textColor="@android:color/white"
-        android:textSize="14dp" />
 
 
 

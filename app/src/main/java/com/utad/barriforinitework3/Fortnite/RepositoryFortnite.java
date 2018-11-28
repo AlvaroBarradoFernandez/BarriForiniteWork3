@@ -17,12 +17,8 @@ public class RepositoryFortnite {
         return ourInstance;
     }
 
-    private RepositoryFortnite() {
-    }
 
     private ForniteAPI forniteApi = ForniteAPI.Factory();
-
-
     public Observable<UserFortnite> getFortniteInfo(String platformGame, String epic_nickname){
         //return gerritAPI.loadChanges(status);
         return forniteApi.getFortniteInfo(platformGame,epic_nickname);

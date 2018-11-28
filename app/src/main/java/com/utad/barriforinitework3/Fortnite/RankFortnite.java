@@ -2,6 +2,7 @@ package com.utad.barriforinitework3.Fortnite;
 
 public class RankFortnite {
 
+    //Una vez aquí pintamos los datos que queremos de la anterior clase
     private String label;
     private String rank;
     private String displayValue;
